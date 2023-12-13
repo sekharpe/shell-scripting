@@ -9,10 +9,10 @@ read -p "enter the name that you want to search in the file: " search
 prompt=$(cat $i | grep $search)
 exit_status=$($?)
 #echo "the file $i count is $count"
-if($(exit_status) -ne 0)
+if($(exit_status) -eq 0)
 then
 echo "the file $i count is $count and seach patter not found in the file"
-else
+else if
 echo "the file $i count is $count and search pattern is found that is $prompt"
 fi
 done
