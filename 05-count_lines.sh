@@ -5,7 +5,14 @@ var=$(ls -lrt | grep sh | awk '{print $9}')
 for i in $var
 do
 count=$(cat $i | wc -l)
-echo "the file $i count is $count"
+read -p "enter the name that you want to search in the file: " search
+prompt=$(ls | grep $search)
+#echo "the file $i count is $count"
+if($? -ne 0)
+then
+echo "the file $i count is $count and seach patter not found in the file"
+else
+echo "the file $i count is $count and search pattern is found that is $prompt"
 done
 #thefile=$((ls -lrt | grep sh | awk 'print{$9}'))
 #count=$(cat $thefile | wc -l)
