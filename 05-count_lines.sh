@@ -4,7 +4,8 @@
 var=$(ls -lrt | grep sh | awk '{print $9}')
 for i in $var
 do
-echo "the file is $i"
+count=$(cat $i | wc -l)
+echo "the file count is $count"
 done
 #thefile=$((ls -lrt | grep sh | awk 'print{$9}'))
 #count=$(cat $thefile | wc -l)
