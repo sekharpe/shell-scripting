@@ -13,6 +13,7 @@ then
 echo "the file $i count is $count and seach patter not found in the file"
 else
 echo "the file $i count is $count and search pattern is found that is $prompt"
+fi
 done
 #thefile=$((ls -lrt | grep sh | awk 'print{$9}'))
 #count=$(cat $thefile | wc -l)
