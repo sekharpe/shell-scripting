@@ -2,7 +2,7 @@
 
 #first find the no of lines in a text file
 var=$(ls -lrt | grep tar | awk '{print $9}')
-for i in var
+for i in $var
 do
 echo "the file is $i"
 done
