@@ -6,7 +6,7 @@ for i in $var
 do
 count=$(cat $i | wc -l)
 read -p "enter the name that you want to search in the file: " search
-prompt=$(ls | grep $search)
+prompt=$(cat $i | grep $search)
 #echo "the file $i count is $count"
 if($? -ne 0)
 then
