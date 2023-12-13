@@ -7,8 +7,9 @@ do
 count=$(cat $i | wc -l)
 read -p "enter the name that you want to search in the file: " search
 prompt=$(cat $i | grep $search)
+exit_status=$($?)
 #echo "the file $i count is $count"
-if($? -ne 0)
+if($(exit_status) -ne 0)
 then
 echo "the file $i count is $count and seach patter not found in the file"
 else
