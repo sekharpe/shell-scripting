@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #first find the no of lines in a text file
-var=`ls -lrt`
+var=$(ls -lrt)
 for i in var
 thefile=$(ls -lrt | grep sh | awk 'print{$9}')
 count=$(cat $thefile | wc -l)
