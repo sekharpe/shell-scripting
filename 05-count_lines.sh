@@ -6,15 +6,19 @@ for i in $var
 do
 count=$(cat $i | wc -l)
 read -p "enter the name that you want to search in the file: " search
-prompt=$(cat $i | grep $search)
-exit_status=$($?)
+#prompt=$(cat $i | grep $search)
+#exit_status=$($?)
 #echo "the file $i count is $count"
-if($(exit_status) -ne 0)
-then
-echo "the file $i count is $count and seach patter not found in the file"
-
+#if($(exit_status) -ne 0)
+#then
+#echo "the file $i count is $count and seach patter not found in the file"
+#else
+#echo "the file $i count is $count and search pattern is found that is $prompt"
+#fi
+if grep -q "$search" "$i"; then
+    echo "The word '$search' was found in '$i'."
 else
-echo "the file $i count is $count and search pattern is found that is $prompt"
+    echo "The word '$search' was not found in '$i'."
 fi
 done
 #thefile=$((ls -lrt | grep sh | awk 'print{$9}'))
