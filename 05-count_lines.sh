@@ -12,7 +12,7 @@ exit_status=$($?)
 if($(exit_status) -ne 0)
 then
 echo "the file $i count is $count and seach patter not found in the file"
-exit 1
+
 else
 echo "the file $i count is $count and search pattern is found that is $prompt"
 fi
