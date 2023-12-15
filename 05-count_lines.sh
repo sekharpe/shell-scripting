@@ -15,7 +15,7 @@ read -p "enter the name that you want to search in the file: " search
 #else
 #echo "the file $i count is $count and search pattern is found that is $prompt"
 #fi
-seach_line=$(grep -i $search $i)
+search_line=$(grep -i $search $i)
 if [ $? -eq 0 ]
 then
     echo "The word '$search' was found in '$i' it has $count lines in the file and the search pattern line is $search_line ."
