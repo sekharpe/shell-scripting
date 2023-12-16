@@ -12,8 +12,9 @@ count=$(cat wordfile | wc -w)
 for i in {1..20}
 do
 match_word=$(awk '{print $i}' wordfile)
-search_word=$(grep -o -i $(match_word) wordfile | wc -l)
-echo "the no of occurances of the word $(match_word) is $(search_word)"
+#search_word=$(grep -o -i $(match_word) wordfile | wc -l)
+#echo "the no of occurances of the word $(match_word) is $(search_word)"
+echo $match_word
 done
 #count=count+1
 
