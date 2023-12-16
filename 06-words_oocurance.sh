@@ -7,7 +7,7 @@
 
 #var=$(ls -lrt | awk '{print $9}')
 #filename=$(ls -lrt | grep wordfile | awk '{print $9}')
-count=$((cat wordfile | wc -w))
+count=$(cat wordfile | wc -w)
 
 for c in {1..$count}
 do
