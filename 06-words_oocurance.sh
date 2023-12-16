@@ -9,9 +9,9 @@
 #filename=$(ls -lrt | grep wordfile | awk '{print $9}')
 count=$(cat wordfile | wc -w)
 
-for c in {1..$count}
+for i in {1..20}
 do
-match_word=$(awk '{print $c}' wordfile)
+match_word=$(awk '{print $i}' wordfile)
 search_word=$(cat wordfile | grep -o -i $(match_word) | wc -l)
 echo "the no of occurances of the word $(match_word) is $(search_word)"
 done
