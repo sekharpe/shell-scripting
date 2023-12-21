@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "script start executing at $TIMESTAMP" &>> $LOGFILE
+echo "script start executing at $TIMESTAMP" &>>$LOGFILE
 ID=$(id -u)
 if ($ID -ne 0)
 then
@@ -17,7 +17,6 @@ VALIDATE()
     echo " $2 ... Successfull"
     else
     echo " $2 ... Failed"
-
 }
 
 
