@@ -1,5 +1,5 @@
-#!/bin/bash
-echo "script start executing at $TIMESTAMP" &>>$LOGFILE
+#!/bin/sh
+echo "script start executing at $TIMESTAMP" &>> $LOGFILE
 ID=$(id -u)
 if ($ID -ne 0)
 then
