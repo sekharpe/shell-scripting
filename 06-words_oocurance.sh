@@ -9,7 +9,7 @@
 #filename=$(ls -lrt | grep wordfile | awk '{print $9}')
 count=$(cat wordfile | wc -w)
 
-for i in {1..$(count)}
+for i in {1..$count}
 do
 match_word=$(awk -v i="$i" '{print $i}' wordfile)
 #search_word=$(grep -o -i $(match_word) wordfile | wc -l)
