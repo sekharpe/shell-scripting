@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "script start executing at $TIMESTAMP"
 ID=$(id -u)
-if ($ID -ne 0)
+if [ $ID -ne 0 ]
 then
 echo "Please run the script with root access"
 else
@@ -12,7 +12,7 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 VALIDATE()
 {
-    if ($1 -ne 0)
+    if [ $1 -ne 0 ]
     then
     echo " $2 ... Successfull"
     else
@@ -23,7 +23,7 @@ VALIDATE()
 for package in $@
 do
 yum list installed $package
-  if ($? -ne 0)
+  if [ $? -ne 0 ]
   then
     yum install $package -y &>> $LOGFILE
     VALIDATE()$? "the package $package"
