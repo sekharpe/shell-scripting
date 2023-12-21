@@ -1,4 +1,5 @@
 #!/bin/sh
+TIMESTAMP=$(date +%F-%H-%M-%s)
 echo "script start executing at $TIMESTAMP"
 ID=$(id -u)
 if [ $ID -ne 0 ]
@@ -7,7 +8,7 @@ echo "Please run the script with root access"
 else
 echo " You are the root user, so you can run the script"
 fi
-TIMESTAMP=$(date +%F-%H-%M-%s)
+
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 VALIDATE()
